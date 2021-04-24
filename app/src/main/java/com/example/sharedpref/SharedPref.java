@@ -2,7 +2,6 @@ package com.example.sharedpref;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-
 import java.util.Set;
 
 public class SharedPref {
