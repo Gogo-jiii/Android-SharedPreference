@@ -1,12 +1,12 @@
-package com.example.sharedpref;
+package com.example.sharedpreference;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import java.util.Set;
 
-public class SharedPref {
+public class SharedPreferenceManager {
 
-    private static SharedPref instance = null;
+    private static SharedPreferenceManager instance = null;
     private Context context;
     private SharedPreferences sharedPreferences;
 
@@ -86,12 +86,12 @@ public class SharedPref {
     public static final int DATA_TYPE_BOOLEAN = 5;
     public static final int DATA_TYPE_SET = 6;
 
-    private SharedPref() {
+    private SharedPreferenceManager() {
     }
 
-    public static SharedPref getInstance(Context context) {
+    public static SharedPreferenceManager getInstance(Context context) {
         if (instance == null) {
-            instance = new SharedPref();
+            instance = new SharedPreferenceManager();
         }
         instance.init(context);
         return instance;
@@ -134,7 +134,7 @@ public class SharedPref {
         }
     }
 
-    SharedPref read(String key, int dataType) {
+    SharedPreferenceManager read(String key, int dataType) {
         switch (dataType) {
             case DATA_TYPE_STRING:
                 instance.setPrefString(sharedPreferences.getString(key, ""));

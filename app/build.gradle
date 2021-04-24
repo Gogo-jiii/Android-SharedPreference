@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.example.sharedpref"
+        applicationId "com.example.sharedpreference"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
